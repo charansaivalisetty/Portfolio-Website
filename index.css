@@ -1,0 +1,504 @@
+html {
+    scroll-padding-top: 60px;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    color: ivory;
+  }
+  
+  html, body {
+    overflow-x: hidden;
+  }
+  
+  body {
+    font-family:'Poppins', sans-serif;
+    text-align: center;
+    background-color: black;
+    /* background: linear-gradient(90deg, #0A1C28, #1A3B4D); */
+    margin-top: 60px;
+    /* overflow-x: hidden; */
+    position: relative;
+  }
+
+  .resume {
+    text-shadow: 2px 1px 1px white;
+  }
+  
+  h1 {
+    font-size: 60px;
+  }
+  
+  h2 {
+    font-size: 40px;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  @keyframes fade-up {
+    0% {
+      opacity: 0;
+      transform: translateZ(30px) scale(0.9);
+    }
+  
+    100% {
+      opacity: 1;
+      transform: translateZ(0px) scale(1);
+    }
+  }
+  
+  @keyframes fadeUpWelcome {
+    0% {
+      opacity: 0;
+      transform: translateY(20px) scale(0.9);
+    }
+  
+    100% {
+      opacity: 1;
+      transform: translateY(0px) scale(1);
+    }
+  }
+  
+  @keyframes fadeDownNav {
+    0% {
+      opacity: 0;
+      transform: translateY(-30px) scale(1);
+    }
+  
+    100% {
+      opacity: 1;
+      transform: translateY(0px) scale(1);
+    }
+  }
+  
+  @keyframes fadeUpSidebarItems {
+    0% {
+      opacity: 0;
+      transform: translateX(-30px) scale(1);
+    }
+  
+    100% {
+      opacity: 1;
+      transform: translateX(0px) scale(1);
+    }
+  }
+  
+  @keyframes fadeUpSidebar {
+    0% {
+      opacity: 0;
+      transform: translateX(-100vw) scale(1);
+    }
+  
+    100% {
+      opacity: 1;
+      transform: translateX(0vw) scale(1);
+    }
+  }
+  
+  .skills {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    min-height: 70vh;
+  }
+  
+  .skill-icons {
+    display: flex;
+    justify-content: center;
+    gap: 120px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+  }
+  
+  .skill-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    font-size: 60px; /* Matches the accent color */
+  }
+  
+  .skill-icon i {
+    line-height: 1;
+  }
+  
+  .skill-icon p {
+    margin-top: 8px;
+    font-size: 20px;
+  }
+  
+  #navbar {
+    position:fixed;
+    top: 0;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    background-color: rgba(9, 1, 7, 0.2);
+    font-size: 20px;
+    backdrop-filter: saturate(180%) blur(20px);
+    border-bottom: 1px solid rgba(100, 100, 100, 0.5);
+    animation: fadeDownNav 0.5s 0.4s backwards;  
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+  }
+  
+  .nav-links a:hover {
+      transform: scale(1.12);
+  }
+
+  .nav-links a:focus, .sidebar a.active {
+    opacity: 0.6;
+  }
+  
+ 
+  nav ul {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    /* flex: 1; */
+    justify-content: center;
+    align-items: center;
+  }
+  
+  nav li{
+    height: 60px;
+    transition: transform 0.3s ease;
+  }
+  
+  nav a, nav p {
+    height: 100%;
+    padding: 0 30px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .explore {
+     display: none; 
+  }
+  
+  
+  
+  .nav-links .resume {
+      background-position: 0;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: shine 3s infinite linear;
+      animation-fill-mode: forwards;
+      -webkit-text-size-adjust: none;
+      text-decoration: none;
+      white-space: nowrap;
+  }
+  
+  nav ul .division {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex: 1;
+  }
+  
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 999;
+    background-color: black;
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    flex-direction: column;
+  }
+  
+  .sidebar li {
+    animation: fadeUpSidebarItems 0.15s;
+    font-size: 30px;
+  }
+  
+  .sidebar li, .sidebar a {
+    width: 100%;
+    padding: 0;
+  }
+  
+  .sidebar li:last-child {
+    margin-top: 3vh;
+    opacity: 0.6;
+    font-size: 24px;
+  } 
+
+/* Optional: Add smooth transition for the active state */
+.navbar a, .sidebar a {
+    transition: all 0.3s ease;
+}
+  
+  
+  
+  #welcome-section {
+    display: flex;
+    flex-direction: column;
+    min-height: 90vh;
+  }
+  
+  #welcome-section h1 {
+    margin-top: 7vh;
+    animation: fadeUpWelcome 2s;
+  }
+  
+  #welcome-section p {
+    font-size: 21px;
+    line-height: 6vh; /* 40px */
+    margin: 30px 180px;
+    text-align: justify;
+    hyphens: auto;
+    animation: fadeUpWelcome 0.5s;
+  }
+  
+  section {
+    padding: 20px;
+  }
+  
+  #projects {
+    min-height: max-content;
+  }
+  
+  .projects {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between; 
+        padding: 30px 80px 0px 80px;
+  }
+  
+  .project-section {
+        background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.1), black, rgba(200, 200, 200, 0.1));
+        border-radius: 20px;
+        background-size: cover;
+        box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+        margin: 15px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+      }
+  
+      .image-section {
+        justify-content: center;
+        padding: 80px 40px 40px 40px;
+      }
+  
+      .content-section {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+      }
+  
+      .project-tile {
+        text-decoration: none;
+      }
+  
+      .project-tile h2 {
+        margin-bottom: 20px;
+        text-decoration: none;
+      }
+  
+      .content-section p {
+        line-height: 1.6;
+        text-decoration: none;
+        text-align: justify;
+        margin: 10px 20px 15px 0px;
+      }
+  
+      .project-tech-stack {
+        margin-right: 15px;
+      }
+  
+  .project-link, .project-code {
+    font-size: 20px;
+    margin-right: 15px;
+  }
+  
+  #contact {
+    min-width: 100vw;
+    min-height: 80vh;
+  }
+  
+  #contact h1 {
+    margin-top: 100px;
+    margin-bottom: 20px;
+  }
+  
+  #contact .social-medias {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    justify-content: space-around;
+    margin: auto;
+  }
+  
+  #contact .social-media {
+    text-decoration: none;
+    transition: transform 0.2s ease-in;
+    display: flex;
+    align-items: center;
+    margin: 20px;
+    font-size: 22px;
+  }
+  
+  #contact .social-media:hover {
+    transform: translateY(4px);
+  }
+  
+  footer {
+    border-top: 3px solid white;
+    font-size: 25px;
+    padding: 30px;
+  }
+  
+  @media only screen and (max-width: 1100px) {
+    .project-section {
+      display: flex;
+      flex-direction: column;
+      width: 80vw;
+    }
+  
+    .image-section {
+      padding-top: 30px;
+      padding-bottom: 20px;
+    }
+  
+    .image-section img {
+      border: none;
+      border-radius: 16px;
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  
+    #welcome-section {
+      margin-top: -80px;
+      display: flex;
+      justify-content: center;   
+      align-items: center;
+      height: 100vh;
+      animation: fadeUpWelcome 0.5s;
+    }
+  
+    #welcome-section p {
+      font-size: 18px;  
+      margin: 20px;
+      width: 80vw;
+      line-height: 4vh;
+      text-align: start; 
+    }
+  
+    
+  }
+  
+  @media only screen and (max-width: 850px) {
+    .explore {
+      display: flex;
+    }
+  
+    .hideOnMobile {
+      display: none;
+    }
+  
+    .skills {
+    padding-top: 20vh;
+    padding-bottom: 20vh;
+    }
+  
+     
+  }
+  
+  @media only screen and (max-width: 700px) {
+  
+    body {
+      font-size: 14px; 
+      margin-top: 0;  
+      overflow-x: hidden; 
+    }
+  
+    #welcome-section {
+      margin-top: 0px;
+    }
+  
+   
+    .social-media p, footer p, #welcome-section p {
+      font-size: 16px;
+    }
+  
+    .content-section p{
+      text-align: start;
+    }
+  
+    h1 {
+      font-size: 45px; 
+    }
+  
+    h2 {
+      font-size: 30px;
+    }
+  
+    .skill-icons {
+      gap: 80px;
+    }
+  }
+  
+  @media only screen and (max-width: 400px){
+  
+    #navbar .nav-links li a, #navbar .nav-links li p{
+      padding: 10px;
+      font-size: 16px;
+    }
+  
+    h2 {
+      font-size: 26px;
+    }
+  
+    footer p {
+      font-size: 14px;
+    }
+  
+    .project-section {
+      width: 90vw;
+    }
+  
+    .sidebar {
+      align-content: center;
+    }
+  
+    .sidebar {
+      margin-top: -4vh;
+    }
+  
+    .sidebar li a {
+      font-size: 24px;
+    }
+  
+    .sidebar li:last-child a{
+      font-size: 20px;
+   }
+  
+   .skills {
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+  }
+
+  #welcome-section p {
+    font-size: 14px;  
+    margin: 20px;
+    width: 80vw;
+    line-height: 3vh;
+    text-align: start; 
+  }
+} 

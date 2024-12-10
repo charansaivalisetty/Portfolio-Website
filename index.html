@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Charan Valisetty | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400&display=swap" rel="stylesheet">
+  <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <header>
+
+    <nav id="navbar">
+      <ul class="sidebar">
+        <li onclick="hideSidebar()"><a href="#welcome-section" class="sidebar-link active">About</a></li>
+        <li onclick="hideSidebar()" class="sidebar-link"><a href="#skills">Skills</a></li>
+        <li onclick="hideSidebar()" class="sidebar-link"><a href="#projects">Projects</a></li>
+        <li onclick="hideSidebar()" class="sidebar-link"><a href="#contact">Contacts</a></li>
+        <li onclick="hideSidebar()"><a href="#resume">View Resume</a></li>
+        <li onclick="hideSidebar()"><a href="" class="back">Back</a></li>
+      </ul>
+      <ul class="nav-links">
+        <li class="holder-name"><p>Charan Valisetty</p></li>
+        <ul class="division">
+        <li class="hideOnMobile"><a href="#welcome-section" class="active">About</a></li>
+        <li class="hideOnMobile"><a href="#skills">Skills</a></li>
+        <li class="hideOnMobile"><a href="#projects">Projects</a></li>
+        <li class="hideOnMobile"><a href="#contact">Contact</a></li>
+        </ul>
+        <li class=" hideOnMobile"><a class="resume" href="#resume">View Resume</a></li>
+        <li onclick="showSidebar()" class="explore"><a href="#" class="explore-button">Explore</a></li>
+      </ul>
+    </nav>
+  </header>
+  <section id="welcome-section">
+    <h1>About Me</h1>
+    <p>I'm Charan Sai Valisetty, a front-end developer with a background in Mechanical Engineering and experience in Customer Engagement. Previously, I worked with users and developers to identify issues and implement solutions, enhancing customer satisfaction. Now, I focus on building responsive, user-friendly websites using HTML, CSS, and JavaScript. I’m passionate about creating seamless digital experiences and continuously sharpening my skills in front-end development. My goal is to combine technical expertise with creativity to deliver impactful solutions that truly engage users.
+    </p>
+  </section>
+
+  <section class="skills" id="skills">
+    <h1>Skills</h1>
+    <div class="skill-icons">
+    <div class="skill-icon">
+      <i class="fa-brands fa-html5"></i>
+      <p>HTML</p>
+    </div>
+    <div class="skill-icon">
+      <i class="fa-brands fa-css3-alt"></i>
+      <p>CSS</p>
+    </div>
+    <div class="skill-icon">
+      <i class="fa-brands fa-js"></i>
+      <p>JavaScript</p>
+    </div>
+    <div class="skill-icon">
+      <i class="fa-brands fa-git"></i>
+      <p>Git</p>
+    </div>
+    <div class="skill-icon">
+      <i class="fa-brands fa-github"></i>
+      <p>GitHub</p>
+    </div>
+  </div>
+  </section>
+
+  <section id="projects">
+  <h1 class="projects-heading">Project Collective</h1>
+  <div class="projects">
+    <section class="project-section">
+      <section class="image-section">
+        <img src="images/image.png" alt="leads tracker" width="300px" height="120px">
+        <div class="image-gradient"></div>
+      </section>
+      <section class="content-section">
+        <h2>Leads Tracker</h2>
+        <p>I developed a Chrome extension that allows users to save and manage URLs conveniently. This extension features the ability to save URLs manually or capture the current tab’s URL, utilizing persistent storage with localStorage to ensure saved URLs are available even after browser restarts. The user-friendly interface is built with HTML, CSS, and JavaScript, and it includes functionality to clear all saved leads with a double-click. By integrating the Chrome Tabs API, the extension interacts seamlessly with the active tab.</p>
+        <div class="project-stack">
+        <span class="project-tech-stack">HTML</span> 
+        <span class="project-tech-stack">CSS</span>
+        <span class="project-tech-stack">JS</span>
+        <a href="" class="project-link" title="External link"><i class="fa-solid fa-link"></i></a>
+        <a href="" class="project-code" title="GitHub">
+          <i class="ri-github-line"></i>
+        </a>
+        </div>
+      </section>
+    </section> 
+
+    <section class="project-section">
+      <section class="image-section">
+        <img src="images/images2.jpeg" alt="YouTube-Clone" width="300px" height="150px">
+        <div class="image-gradient"></div>
+      </section>
+      <section class="content-section">
+        <h2>YouTube Clone</h2>
+        <p>I built a YouTube clone using HTML and CSS, with responsive layouts via Flexbox and Grid. The project features modular styles for the header, video grid, and sidebar. I used Google Fonts (Roboto) for typography and SVG icons for key interactive elements like search and notifications. Custom tooltips enhance usability, while the video grid replicates YouTube’s layout with clickable thumbnails, video duration, and metadata.</p>
+        <div class="project-stack">
+        <span class="project-tech-stack">HTML</span> 
+        <span class="project-tech-stack">CSS</span>
+        <a href="" class="project-link" title="External link"><i class="fa-solid fa-link"></i></a>
+        <a href="" class="project-code" title="GitHub">   
+          <i class="ri-github-line"></i>
+        </a>
+      </div>
+      </section>
+    </section>
+
+  </div>
+  </section>
+  <section id="contact">
+    <h1>Let's Connect</h1>
+    <div class="social-medias">
+      <a href="https://www.linkedin.com/in/charan-sai-valisetty-26a571224/" class="social-media" target="_blank">
+        <i class="ri-linkedin-box-fill ri-2x"></i>
+        <p>Network with me on LinkedIn</p>
+      </a>
+      <a href="https://github.com/charansaivalisetty" class="social-media" target="_blank">
+        <i class="ri-github-fill ri-2x"></i>
+        <p>Explore my code on GitHub</p>
+      </a>
+      <a href="mailto:charansai1908aug@gmail.com" class="social-media" target="_blank">
+        <i class="ri-at-line ri-2x"></i>
+        <p>Send a mail</p>
+      </a>
+      <a href="tel: +916281870841" class="social-media" target="_blank">
+        <i class="ri-cellphone-line ri-2x"></i>
+        <p>Call me</p>
+      </a>
+    </div>
+  </section>
+  <footer>
+    <p>Created by <span class="name">Charan Sai Valisetty</span> Dec 2024</p>
+  </footer>
+  <script src="index.js">
+   
+  </script>
+</body>
+</html> 
